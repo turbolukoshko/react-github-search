@@ -1,11 +1,16 @@
-import './App.css';
-
+import React from "react";
+import "./App.css";
+import Home from "./components/Home/Home";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
-    <div className="container pt-4">
-      <h1>Github Search</h1>
-    </div>
+    <React.Fragment>
+      <Navbar />
+      <div className="container pt-4">
+        <Home />
+      </div>
+    </React.Fragment>
   );
 }
 
