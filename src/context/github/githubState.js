@@ -13,7 +13,7 @@ import { githubReducer } from "./githubReducer";
 export const GithubState = ({ children }) => {
   const initialState = {
     user: {},
-    users: {},
+    users: [],
     loading: false,
     repositories: [],
   };
