@@ -1,9 +1,10 @@
 import React, { Fragment, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { GithubContext } from "../../context/github/githubContext";
+import Repository from "../Repository/Repository";
 
 const Profile = ({ match }) => {
-  const { getUser, getRepositories, loading, user } = useContext(
+  const { getUser, getRepositories, loading, user, repositories } = useContext(
     GithubContext
   );
   const urlName = match.params.name;
@@ -71,6 +72,7 @@ const Profile = ({ match }) => {
           </div>
         </div>
       </div>
+      <Repository repos={repositories}/>
     </Fragment>
   );
 };
